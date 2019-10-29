@@ -177,6 +177,8 @@ module sort(
     cmp cmp18 (.in0(cmp18_in0), .in1(cmp18_in1), .out0(cmp18_out0), .out1(cmp18_out1));
     cmp cmp19 (.in0(cmp19_in0), .in1(cmp19_in1), .out0(cmp19_out0), .out1(cmp19_out1));
 
+    assign median = cmp19_out1 
+
 
 endmodule
 
