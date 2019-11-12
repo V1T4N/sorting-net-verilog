@@ -112,23 +112,23 @@ module sort_pipe(
     reg [7:0] cmp19_in0;
     reg [7:0] cmp19_in1;
 
-    reg[7:0] r02_tmp;
-    reg[7:0] r05_tmp;
-    reg[7:0] r08_tmp;
-    reg[7:0] r10_tmp;
-    reg[7:0] r13_tmp;
-    reg[7:0] r16_tmp;
-    reg[7:0] r22_tmp;
-    reg[7:0] r25_tmp;
-    reg[7:0] r28_tmp;
-    reg[7:0] r32_tmp;
-    reg[7:0] r35_tmp;
-    reg[7:0] r36_tmp;
-    reg[7:0] r43_tmp;
-    reg[7:0] r52_tmp;
-    reg[7:0] r56_tmp;
-    reg[7:0] r65_tmp;
-    reg[7:0] r73_tmp;
+    reg[7:0] r0_2_tmp;
+    reg[7:0] r0_5_tmp;
+    reg[7:0] r0_8_tmp;
+    reg[7:0] r1_0_tmp;
+    reg[7:0] r1_3_tmp;
+    reg[7:0] r1_6_tmp;
+    reg[7:0] r2_2_tmp;
+    reg[7:0] r2_5_tmp;
+    reg[7:0] r2_8_tmp;
+    reg[7:0] r3_2_tmp;
+    reg[7:0] r3_5_tmp;
+    reg[7:0] r3_6_tmp;
+    reg[7:0] r4_3_tmp;
+    reg[7:0] r5_2_tmp;
+    reg[7:0] r5_6_tmp;
+    reg[7:0] r6_5_tmp;
+    reg[7:0] r7_3_tmp;
 
 always @(posedge clk)begin
 
@@ -142,18 +142,18 @@ always @(posedge clk)begin
     cmp3_in1 <= x_7;
     
 
-    r02_tmp <= x_2;
-    r05_tmp <= x_5;
-    r08_tmp <= x_8;
+    r0_2_tmp <= x_2;
+    r0_5_tmp <= x_5;
+    r0_8_tmp <= x_8;
     r0[0] <= cmp1_out0;
     r0[1] <= cmp1_out1;
-    r0[2] <= r02_tmp;
+    r0[2] <= r0_2_tmp;
     r0[3] <= cmp2_out0;
     r0[4] <= cmp2_out1;
-    r0[5] <= r05_tmp;
+    r0[5] <= r0_5_tmp;
     r0[6] <= cmp3_out0;
     r0[7] <= cmp3_out1;
-    r0[8] <= r08_tmp;
+    r0[8] <= r0_8_tmp;
 
 
     cmp4_in0 <= r0[1];
@@ -165,16 +165,16 @@ always @(posedge clk)begin
     cmp6_in0 <= r0[7];
     cmp6_in1 <= r0[8];
 
-    r10_tmp <= r0[0];
-    r13_tmp <= r0[3];
-    r16_tmp <= r0[6];
-    r1[0] <= r10_tmp;
+    r1_0_tmp <= r0[0];
+    r1_3_tmp <= r0[3];
+    r1_6_tmp <= r0[6];
+    r1[0] <= r1_0_tmp;
     r1[1] <= cmp4_out0;
     r1[2] <= cmp4_out1;
-    r1[3] <= r13_tmp;
+    r1[3] <= r1_3_tmp;
     r1[4] <= cmp5_out0;
     r1[5] <= cmp5_out1;
-    r1[6] <= r16_tmp;
+    r1[6] <= r1_6_tmp;
     r1[7] <= cmp6_out0;
     r1[8] <= cmp6_out1;
 
@@ -188,18 +188,18 @@ always @(posedge clk)begin
     cmp9_in0 <= r1[6];
     cmp9_in1 <= r1[7];
 
-    r22_tmp <= r1[2];
-    r25_tmp <= r1[5];
-    r28_tmp <= r1[8];
+    r2_2_tmp <= r1[2];
+    r2_5_tmp <= r1[5];
+    r2_8_tmp <= r1[8];
     r2[0] <= cmp7_out0;
     r2[1] <= cmp7_out1;
-    r2[2] <= r22_tmp;
+    r2[2] <= r2_2_tmp;
     r2[3] <= cmp8_out0;
     r2[4] <= cmp8_out1;
-    r2[5] <= r25_tmp;
+    r2[5] <= r2_5_tmp;
     r2[6] <= cmp9_out0;
     r2[7] <= cmp9_out1;
-    r2[8] <= r28_tmp;
+    r2[8] <= r2_8_tmp;
 
 
     cmp10_in0 <= r2[0];
@@ -212,16 +212,16 @@ always @(posedge clk)begin
     cmp12_in1 <= r2[8];
 
 
-    r32_tmp <= r2[6];
-    r35_tmp <= r2[7];
-    r36_tmp <= r2[2];
+    r3_2_tmp <= r2[6];
+    r3_5_tmp <= r2[7];
+    r3_6_tmp <= r2[2];
   //r3[0] <= cmp10_out0;
     r3[1] <= cmp10_out1;
-    r3[2] <= r32_tmp;
+    r3[2] <= r3_2_tmp;
     r3[3] <= cmp11_out0;
     r3[4] <= cmp11_out1;
-    r3[5] <= r35_tmp;
-    r3[6] <= r36_tmp;
+    r3[5] <= r3_5_tmp;
+    r3[6] <= r3_6_tmp;
     r3[7] <= cmp12_out0;
   //r3[8] <= cmp12_out1;
 
@@ -235,11 +235,11 @@ always @(posedge clk)begin
     cmp15_in1 <= r3[7];
 
 
-    r43_tmp <= r3[3];
+    r4_3_tmp <= r3[3];
   //r4[0] <= cmp10_out0;
   //r4[1] <= cmp13_out0;
     r4[2] <= cmp13_out1;
-    r4[3] <= r43_tmp;
+    r4[3] <= r4_3_tmp;
     r4[4] <= cmp14_out0;
   //r4[5] <= cmp14_out1;
     r4[6] <= cmp15_out0;
@@ -250,15 +250,15 @@ always @(posedge clk)begin
     cmp16_in1 <= r4[4];
 
 
-    r52_tmp <= r4[2];
-    r56_tmp <= r4[6];
+    r5_2_tmp <= r4[2];
+    r5_6_tmp <= r4[6];
   //r5[0] <= cmp10_out0;
   //r5[1] <= cmp13_out0;
-    r5[2] <= r52_tmp;
+    r5[2] <= r5_2_tmp;
     r5[3] <= cmp16_out0;
     r5[4] <= cmp16_out1;
   //r5[5] <= cmp14_out1; 
-    r5[6] <= r56_tmp;
+    r5[6] <= r5_6_tmp;
   //r5[7] <= cmp15_out1;
   //r5[8] <= cmp12_out1;
 
@@ -266,13 +266,13 @@ always @(posedge clk)begin
     cmp17_in1 = r5[4];
 
 
-    r65_tmp <= r5[6];
+    r6_5_tmp <= r5[6];
   //r6[0] <= cmp10_out0;
   //r6[1] <= cmp13_out0;
   //r6[2] <= r4[2];
     r6[3] <= cmp17_out0;
     r6[4] <= cmp17_out1;
-    r6[5] <= r65_tmp;  
+    r6[5] <= r6_5_tmp;  
   //r6[6] <= r4[6];
   //r6[7] <= cmp15_out1;
   //r6[8] <= cmp12_out1;
@@ -282,11 +282,11 @@ always @(posedge clk)begin
     cmp18_in1 <= r6[5];
 
 
-    r73_tmp <= r6[3];
+    r7_3_tmp <= r6[3];
   //r7[0] <= cmp10_out0;
   //r7[1] <= cmp13_out0;
   //r7[2] <= r4[2];
-    r7[3] <= r73_tmp;
+    r7[3] <= r7_3_tmp;
     r7[4] <= cmp18_out0;
   //r7[5] <= r5[6];  
   //r7[6] <= r4[6];
