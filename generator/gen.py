@@ -46,7 +46,7 @@ net=[   [[1,2],[4,5],[7,8],[10,11],[13,14],[16,17],[19,20],[21,22],[23,24]],
 N = 25
 """
 
-a = open('oddEven49.json')
+a = open('oddEven81.json')
 b = json.load(a)
 N = b["size"]
 net = b["network"]
